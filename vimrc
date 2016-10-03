@@ -1,8 +1,7 @@
 execute pathogen#infect()
-
-language en_US.UTF-8
-
 syntax on
+filetype plugin indent on
+language en_US.UTF-8
 
 " Solarized color theme
 let g:solarized_termtrans=1
@@ -14,7 +13,6 @@ endif
 colorscheme solarized
 
 
-filetype plugin indent on
 
 set nobackup
 set ttyfast
@@ -64,6 +62,6 @@ set laststatus=2
 set encoding=utf-8
 set t_Co=256
 set fillchars+=stl:\ ,stlnc:\
-"let g:Powerline_symbols='fancy'
+"let g:Powerline_symbols = 'fancy'
 set term=xterm-256color
 set termencoding=utf-8
