@@ -1,6 +1,7 @@
 execute pathogen#infect()
 syntax on
-filetype plugin indent on
+filetype off
+
 language en_US.UTF-8
 
 " Solarized color theme
@@ -15,18 +16,37 @@ colorscheme solarized
 " vundle
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
+
 "Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/Syntastic'
+Plugin 'elzr/vim-json'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mhinz/vim-signify'
+Plugin 'sjl/gundo.vim'
 Plugin 'L9'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-surround'
 Bundle 'scrooloose/nerdtree'
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'klen/python-mode'
 
 Plugin 'git://git.wincent.com/command-t.git'
+
+Plugin 'AutoComplPop'
+"Plugin 'taglist-plus'
+"
+Plugin 'solarized'
+Plugin 'tomasr/molokai'
+Plugin 'flazz/vim-colorschemes'
+
 call vundle#end()
+
+
+filetype plugin indent on
 
 set nobackup
 set ttyfast
@@ -38,7 +58,8 @@ set showcmd
 set title
 set nu
 set autoread
-set smartindent
+"set smartindent
+set hlsearch
 set autoindent
 set tabstop=2
 set shiftwidth=2
