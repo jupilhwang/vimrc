@@ -3,14 +3,15 @@ execute pathogen#infect()
 language en_US.UTF-8
 
 syntax on
-colorscheme solarized
 
+" Solarized color theme
+let g:solarized_termtrans=1
 if has('gui_runing')
 				set background=light
 else
 				set background=dark
 endif
-let g:solarized_termcolors=256
+colorscheme solarized
 
 
 filetype plugin indent on
@@ -56,7 +57,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "" powerline 설정하기 "
 
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+set rtp+=~/.vim/bundle/vim-powerline/
+"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 set laststatus=2
+set encoding=utf-8
 set t_Co=256
-"let g:Powerline_symbols = 'fancy'
+set fillchars+=stl:\ ,stlnc:\
+"let g:Powerline_symbols='fancy'
+set term=xterm-256color
+set termencoding=utf-8
