@@ -5,13 +5,13 @@ filetype off
 language en_US.UTF-8
 
 " Solarized color theme
-let g:solarized_termtrans=1
-if has('gui_runing')
-				set background=light
-else
-				set background=dark
-endif
-colorscheme solarized
+"let g:solarized_termtrans=1
+"if has('gui_runing')
+"				set background=light
+"else
+"				set background=dark
+"endif
+"colorscheme solarized
 
 " vundle
 set rtp+=~/.vim/bundle/vundle/
@@ -58,6 +58,7 @@ set showcmd
 set title
 set nu
 set autoread
+set wrap
 "set smartindent
 set hlsearch
 set autoindent
